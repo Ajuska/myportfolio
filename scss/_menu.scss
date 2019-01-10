@@ -93,7 +93,7 @@
       height: 250px;
       background: $profile-image;
       border-radius: 50%;
-      border: solid 4px #fff;
+      border: solid 4px lighten($secondary-color, 100%);
     }
   }
 
