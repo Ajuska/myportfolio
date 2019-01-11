@@ -1,5 +1,5 @@
-$primary-color: #a18e42;
-$secondary-color: #5d3173;
+$primary-color: #645829;
+$secondary-color: #bc78df;
 $show-home-image: true;
 $home-image: url(../img/background_balls.png);
 $profile-image: url(../img/profile_picture.jpeg);
@@ -28,6 +28,15 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
