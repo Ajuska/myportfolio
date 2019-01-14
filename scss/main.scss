@@ -39,7 +39,7 @@ a {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 2;
   width: 100%;
 }
@@ -110,14 +110,17 @@ main {
   }
 }
 
-// Code Projects
-.code_projects {
+// Projects
+.projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
   img {
     width: 100%;
+    height: 25vh;
+    object-fit: contain;
     border: 3px #fff solid;
+    background: #fff;
 
     &:hover {
       opacity: 0.5;
@@ -162,6 +165,23 @@ main {
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+  &.disabled {
+    opacity: 0.65;
+    cursor: default;
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+  &.disabled {
+    &:hover {
+      color: #333;
+      background: lighten($primary-color, 50);
+    }
   }
 }
 
@@ -169,12 +189,67 @@ main {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
+  &.disabled {
+    &:hover {
+      color: #fff;
+      background: darken($primary-color, 50);
+    }
+  }
 }
 
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
+// Popup
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(darken($primary-color, 100), 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.popup {
+  position: relative;
+  top: 25%;
+  width: 50%;
+  left: 25%;
+  padding: 20px;
+  border-radius: 5px;
+  background: $primary-color;
+  @include easeOut();
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: set-text-color($primary-color);
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+  }
+
+  .popcontent {
+    max-height: 30%;
+    overflow: auto;
+  }
 }
 
 #main-footer {
