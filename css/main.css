@@ -140,7 +140,7 @@ a {
   text-decoration: none; }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 2;
   width: 100%; }
 
@@ -186,14 +186,17 @@ main {
     padding: 0.5rem;
     border-bottom: #e6cd43 7px solid; }
 
-.code_projects {
+.projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
-  .code_projects img {
+  .projects img {
     width: 100%;
-    border: 3px #fff solid; }
-    .code_projects img:hover {
+    height: 25vh;
+    object-fit: contain;
+    border: 3px #fff solid;
+    background: #fff; }
+    .projects img:hover {
       opacity: 0.5;
       border-color: #e6cd43;
       transition: all 0.5s ease-out; }
@@ -217,22 +220,74 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-light, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
     background: #e6cd43;
-    color: #000; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
+    color: #000;
+    transition: all 0.5s ease-out; }
+  .btn.disabled, .disabled.btn-light, .disabled.btn-dark {
+    opacity: 0.65;
+    cursor: default; }
 
 .btn-light {
   background: #b5b3b3;
   color: #333; }
+  .btn-light.disabled:hover {
+    color: #333;
+    background: #b5b3b3; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+  .btn-dark.disabled:hover {
+    color: #fff;
+    background: black; }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0; }
+  .popup-overlay:target {
+    visibility: visible;
+    opacity: 1; }
+
+.popup {
+  position: relative;
+  top: 25%;
+  width: 50%;
+  left: 25%;
+  padding: 20px;
+  border-radius: 5px;
+  background: #353434;
+  transition: all 0.5s ease-out; }
+  .popup h2 {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  .popup .close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; }
+    .popup .close:hover {
+      color: #e6cd43;
+      transition: all 0.5s ease-out; }
+  .popup .popcontent {
+    max-height: 30%;
+    overflow: auto; }
 
 #main-footer {
   text-align: center;
@@ -242,12 +297,14 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
-  .code_projects {
+  .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .code_projects {
-    grid-template-columns: repeat(3, 1fr); } }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); }
+    .projects img {
+      height: 25vh; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -278,8 +335,10 @@ main {
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
-  .code_projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+    .projects img {
+      height: 25vh; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -289,5 +348,7 @@ main {
     main .lg-heading {
       margin-top: 3rem;
       font-size: 5rem; }
-  .code_projects {
-    grid-template-columns: 1fr; } }
+  .projects {
+    grid-template-columns: 1fr; }
+    .projects img {
+      height: 30vh; } }
