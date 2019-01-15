@@ -33,19 +33,26 @@ h3 {
   }
 }
 
+.text-secondary {
+  color: $secondary-color;
+}
+
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
+
+  &.text-secondary {
+    &:hover {
+      color: lighten($secondary-color, 20);
+      @include easeOut();
+    }
+  }
 }
 
 header {
   position: absolute;
   z-index: 2;
   width: 100%;
-}
-
-.text-secondary {
-  color: $secondary-color;
 }
 
 main {
@@ -217,9 +224,9 @@ main {
 
 .popup {
   position: relative;
-  top: 25%;
-  width: 50%;
-  left: 25%;
+  top: 35%;
+  width: 35%;
+  left: 35%;
   padding: 20px;
   border-radius: 5px;
   background: $primary-color;
