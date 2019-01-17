@@ -14,12 +14,12 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      background: #e6cd43;
+      background: #fce306;
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      background: #e6cd43;
+      background: #fce306;
       transform: rotate(-45deg) translate(7px, -5.5px); }
 
 .menu {
@@ -59,14 +59,14 @@
       height: 250px;
       background: url(../img/profile_picture.jpeg);
       border-radius: 50%;
-      border: solid 4px #e6cd43; }
+      border: solid 4px #fce306; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #e6cd43; }
+      color: #fce306; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -78,7 +78,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #e6cd43; }
+      color: #fce306; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -136,13 +136,13 @@ h3 {
     background: rgba(58, 57, 57, 0.5); }
 
 .text-secondary {
-  color: #e6cd43; }
+  color: #fce306; }
 
 a {
   color: #fff;
   text-decoration: none; }
   a.text-secondary:hover {
-    color: #f2e59d;
+    color: #fdee6b;
     transition: all 0.5s ease-out; }
 
 header {
@@ -159,12 +159,12 @@ main {
       padding: 0.4rem;
       color: #fff; }
       main .icons a:hover {
-        color: #e6cd43;
+        color: #fce306;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 25vh; }
 
 .about-info {
   display: grid;
@@ -175,7 +175,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #e6cd43 5px solid; }
+    border: #fce306 5px solid; }
   .about-info .bio {
     grid-area: bio; }
   .about-info .job-1 {
@@ -187,7 +187,18 @@ main {
   .about-info .job {
     background: #424141;
     padding: 0.5rem;
-    border-bottom: #e6cd43 7px solid; }
+    border-bottom: #fce306 7px solid; }
+
+code {
+  float: left;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #000;
+  background-color: #e6cf03;
+  padding: 0.3rem 0.3rem;
+  margin: 0.3rem;
+  box-shadow: 0 3px 0 #9a8b02;
+  border-radius: 3px; }
 
 .projects {
   display: grid;
@@ -201,7 +212,7 @@ main {
     background: #fff; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #e6cd43;
+      border-color: #fce306;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -218,7 +229,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #e6cd43;
+      background: #fce306;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -229,7 +240,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
-    background: #e6cd43;
+    background: #fce306;
     color: #000;
     transition: all 0.5s ease-out; }
   .btn.disabled, .disabled.btn-light, .disabled.btn-dark {
@@ -286,7 +297,7 @@ main {
     text-decoration: none;
     color: #fff; }
     .popup .close:hover {
-      color: #e6cd43;
+      color: #fce306;
       transition: all 0.5s ease-out; }
   .popup .popcontent {
     max-height: 30%;
