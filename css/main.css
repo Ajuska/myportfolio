@@ -312,7 +312,9 @@ code {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .sm-heading {
+    margin-right: 25rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
