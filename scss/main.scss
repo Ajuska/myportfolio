@@ -75,7 +75,7 @@ main {
   &#home {
     overflow: hidden;
     h1 {
-      margin-top: 20vh;
+      margin-top: 25vh;
     }
   }
 }
@@ -115,6 +115,18 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 7px solid;
   }
+}
+
+code {
+  float: left;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: set-text-color($secondary-color);
+  background-color: darken($secondary-color, 5);
+  padding: 0.3rem 0.3rem;
+  margin: 0.3rem;
+  box-shadow: 0 3px 0 darken($secondary-color, 20);
+  border-radius: 3px;
 }
 
 // Projects
