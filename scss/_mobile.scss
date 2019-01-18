@@ -3,6 +3,9 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+  .sm-heading {
+    margin-right: 25rem;
+  }
 }
 
 // Desktops & Laptops
@@ -70,6 +73,11 @@
       height: 25vh;
     }
   }
+  .popup {
+    width: 75%;
+    top: 35%;
+    left: 15%;
+  }
 }
 
 // Smartphones
@@ -91,5 +99,10 @@
     img {
       height: 30vh;
     }
+  }
+  .popup {
+    width: 90%;
+    top: 30%;
+    left: 5%;
   }
 }
